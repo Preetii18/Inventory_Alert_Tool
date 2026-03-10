@@ -1,125 +1,39 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Automated Inventory Alert & Reporting Tool</title>
-<style>
-body{
-font-family:Arial;
-background:#0f0f0f;
-color:white;
-padding:40px;
-line-height:1.6;
-}
+<h1 align="center">Automated Inventory Alert & Reporting Tool</h1>
 
-h1,h2{
-color:#3aa0ff;
-}
+<p align="center">
+FastAPI + React + SQLite Inventory Monitoring System
+</p>
 
-code{
-background:#1a1a1a;
-padding:4px 8px;
-border-radius:5px;
-color:#00ff88;
-}
-
-pre{
-background:#1a1a1a;
-padding:15px;
-border-radius:8px;
-overflow:auto;
-}
-
-table{
-border-collapse:collapse;
-width:100%;
-margin-top:10px;
-}
-
-th,td{
-border:1px solid #444;
-padding:10px;
-text-align:left;
-}
-
-th{
-background:#3aa0ff;
-color:black;
-}
-
-</style>
-</head>
-
-<body>
-
-<h1>Automated Inventory Alert & Reporting Tool</h1>
+<hr>
 
 <h2>Project Overview</h2>
-<p>
-The <b>Automated Inventory Alert & Reporting Tool</b> is a full-stack web application that helps monitor stock levels and generate inventory reports.
-The system alerts users when stock falls below a defined threshold and provides graphical analytics of inventory data.
-</p>
 
 <p>
-<b>Backend:</b> FastAPI<br>
-<b>Frontend:</b> React<br>
-<b>Database:</b> SQLite
+This project is a full stack <b>Inventory Management System</b> that monitors stock levels and automatically alerts when stock is low.  
+Users can manage inventory, generate reports, and view analytics charts from a modern dashboard.
 </p>
+
+<b>Backend:</b> FastAPI <br>
+<b>Frontend:</b> React <br>
+<b>Database:</b> SQLite
+
+<hr>
 
 <h2>Features</h2>
+
 <ul>
 <li>User Registration and Login</li>
-<li>Inventory Management (Add, Update, Delete)</li>
-<li>Low Stock Alerts</li>
-<li>Dashboard with Charts</li>
+<li>Add, Update and Delete Inventory</li>
+<li>Low Stock Alert System</li>
+<li>Inventory Dashboard</li>
+<li>Pie Chart & Graph Analytics</li>
 <li>Export Reports (CSV / JSON)</li>
-<li>Modern Dashboard UI</li>
+<li>Modern Neon Dashboard UI</li>
 </ul>
 
-<h2>System Architecture</h2>
-<pre>
-React Frontend
-      ↓
-FastAPI Backend
-      ↓
-SQLite Database
-</pre>
+<hr>
 
-<h2>Team Members</h2>
-
-<table>
-<tr>
-<th>Name</th>
-<th>Contribution</th>
-</tr>
-
-<tr>
-<td>Preeti</td>
-<td>Database Design</td>
-</tr>
-
-<tr>
-<td>Swagat</td>
-<td>FastAPI Backend & Charts</td>
-</tr>
-
-<tr>
-<td>KrishnaPriya</td>
-<td>Login / Register System</td>
-</tr>
-
-<tr>
-<td>Abhi</td>
-<td>Frontend UI Design</td>
-</tr>
-
-<tr>
-<td>Anish & Sarthak</td>
-<td>Documentation, ER Diagram, Use Case Diagram</td>
-</tr>
-
-</table>
-
-<h2>Project Folder Structure</h2>
+<h2>Project Structure</h2>
 
 <pre>
 inventory-alert-system
@@ -138,71 +52,125 @@ frontend
  ├ package.json
 
 diagrams
- ├ ER_diagram.png
- ├ Use_case_diagram.png
+ ├ er_diagram.png
+ ├ usecase_diagram.png
 </pre>
 
-<p>
-<b>Note:</b> The <b>node_modules</b> folder is not included in the repository because it is very large.
-Users must install dependencies manually.
-</p>
+<hr>
 
-<h2>How to Run the Project</h2>
+<h2>Team Members</h2>
 
-<h3>1. Backend Setup (FastAPI)</h3>
+<table>
+<tr>
+<th>Name</th>
+<th>Role</th>
+</tr>
 
-<p>Navigate to backend folder:</p>
+<tr>
+<td>Preeti</td>
+<td>Database Design</td>
+</tr>
 
-<pre><code>cd backend</code></pre>
+<tr>
+<td>Swagat</td>
+<td>FastAPI Backend, API Integration, Charts</td>
+</tr>
 
-<p>Install dependencies:</p>
+<tr>
+<td>KrishnaPriya</td>
+<td>Login & Registration System</td>
+</tr>
 
-<pre><code>pip install -r requirements.txt</code></pre>
+<tr>
+<td>Abhi</td>
+<td>Frontend UI Design</td>
+</tr>
 
-<p>Run backend server:</p>
+<tr>
+<td>Anish & Sarthak</td>
+<td>Documentation, ER Diagram, Use Case Diagram, PPT</td>
+</tr>
 
-<pre><code>uvicorn main:app --reload</code></pre>
+</table>
 
-<p>Backend will run at:</p>
+<hr>
 
-<code>http://127.0.0.1:8000</code>
+<h2>Backend Setup</h2>
 
-<p>API documentation:</p>
+Install dependencies
 
-<code>http://127.0.0.1:8000/docs</code>
+<pre>
+pip install -r requirements.txt
+</pre>
 
-<h3>2. Frontend Setup (React)</h3>
+Run FastAPI server
 
-<p>Navigate to frontend folder:</p>
+<pre>
+uvicorn main:app --reload
+</pre>
 
-<pre><code>cd frontend</code></pre>
+Backend runs at:
 
-<p>Install node modules:</p>
+<pre>
+http://127.0.0.1:8000
+</pre>
 
-<pre><code>npm install</code></pre>
+API Docs:
 
-<p>Replace the generated <b>src</b> folder with the <b>src</b> folder provided in this repository.</p>
+<pre>
+http://127.0.0.1:8000/docs
+</pre>
 
-<p>Run the frontend:</p>
+<hr>
 
-<pre><code>npm start</code></pre>
+<h2>Frontend Setup</h2>
 
-<p>The frontend will run at:</p>
+Go to frontend folder
 
-<code>http://localhost:3000</code>
+<pre>
+cd frontend
+</pre>
+
+Install node modules
+
+<pre>
+npm install
+</pre>
+
+<b>Important:</b>
+
+The <b>node_modules</b> folder is not included in this repository because it is very large.
+
+After installing dependencies, replace the generated <b>src</b> folder with the <b>src</b> folder provided in this repository.
+
+Run frontend:
+
+<pre>
+npm start
+</pre>
+
+Frontend runs at:
+
+<pre>
+http://localhost:3000
+</pre>
+
+<hr>
 
 <h2>Demo Workflow</h2>
 
 <ol>
-<li>Open the frontend in the browser</li>
+<li>Open the frontend</li>
 <li>Register a new user</li>
-<li>Login with credentials</li>
+<li>Login using credentials</li>
 <li>Add inventory items</li>
 <li>Update stock levels</li>
-<li>View low stock alerts</li>
-<li>Observe analytics charts</li>
-<li>Export reports (CSV / JSON)</li>
+<li>Observe low stock alerts</li>
+<li>View pie charts and graphs</li>
+<li>Generate CSV or JSON reports</li>
 </ol>
+
+<hr>
 
 <h2>Technologies Used</h2>
 
@@ -215,17 +183,8 @@ Users must install dependencies manually.
 <li>HTML / CSS</li>
 </ul>
 
-<h2>Notes</h2>
+<hr>
 
-<ul>
-<li>SQLite is used for easy setup.</li>
-<li>Node modules are excluded to keep the repository lightweight.</li>
-<li>Backend and frontend servers must run simultaneously.</li>
-</ul>
-
-<h2>License</h2>
-<p>This project is created for educational purposes.</p>
-
-</body>
-</html>
-
+<p align="center">
+This project was developed for educational purposes.
+</p>
