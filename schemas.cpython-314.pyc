@@ -1,0 +1,22 @@
+import schedule
+import time
+from database import SessionLocal
+import models
+
+def check_inventory():
+
+    db = SessionLocal()
+    items = db.query(models.Item).all()
+
+    for item in items:
+        if item.quantity < item.threshold:
+            print(f"⚠️ ALERT: {item.name} stock is LOW ({item.quantity})")
+
+    db.close()
+
+
+schedule.every(1).minutes.do(check_inventory)
+
+while True:
+    schedule.run_pending()
+    time.sleep(1)

@@ -1,0 +1,21 @@
+from pydantic import BaseModel
+
+
+class ItemCreate(BaseModel):
+    name: str
+    quantity: int
+    threshold: int
+
+
+class ItemUpdate(BaseModel):
+    quantity: int
+
+
+class UserCreate(BaseModel):
+    username: str
+    password: str
+
+
+class UserLogin(BaseModel):
+    username: str
+    password: str
